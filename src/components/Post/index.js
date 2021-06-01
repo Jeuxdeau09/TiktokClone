@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-import {TouchableWithoutFeedback, View} from 'react-native';
+import {TouchableWithoutFeedback, Text, View} from 'react-native';
 import Video from 'react-native-video';
 import styles from './styles';
 
@@ -22,8 +22,17 @@ const Post = () => {
           resizeMode={'cover'}
           repeat={true}
           paused={paused}
+          muted={true}
         />
       </TouchableWithoutFeedback>
+
+      <View style={styles.uiContainer}>
+        <View style={styles.rightContainer}>
+          <Text style={styles.sideuiText}>Component agagwegdg </Text>
+        </View>
+
+        <Text style={styles.uiText}>Component agagwegdg </Text>
+      </View>
     </View>
   );
 };
