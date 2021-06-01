@@ -23,13 +23,36 @@ const styles = StyleSheet.create({
     color: 'white',
   },
 
-  sideuiText: {
-    fontSize: 20,
-    color: 'white',
+  bottomContainer: {
+    padding: 10,
+  },
+
+  handle: {
+    color: '#fff',
+    fontSize: 16,
+    fontWeight: '700',
+    marginBottom: 10,
   },
 
   rightContainer: {
     alignSelf: 'flex-end',
+  },
+
+  description: {
+    color: '#fff',
+    fontSize: 16,
+    fontWeight: '300',
+    marginBottom: 10,
+  },
+
+  songRow: {
+    flexDirection: 'row',
+  },
+
+  songName: {
+    color: '#fff',
+    fontSize: 16,
+    fontWeight: '300',
   },
 });
 
