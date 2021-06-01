@@ -1,20 +1,29 @@
-import React from 'react';
+import React, {useState} from 'react';
 
-import {View} from 'react-native';
+import {TouchableWithoutFeedback, View} from 'react-native';
 import Video from 'react-native-video';
 import styles from './styles';
 
 const Post = () => {
+  const [paused, setPaused] = useState(false);
+
+  const onPlayPausePress = () => {
+    setPaused(!paused);
+  };
+
   return (
     <View style={styles.container}>
-      <Video
-        source={{
-          uri: 'http://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4',
-        }}
-        style={styles.video}
-        resizeMode={'cover'}
-        onError={e => console.log(e)}
-      />
+      <TouchableWithoutFeedback onPress={onPlayPausePress}>
+        <Video
+          source={{
+            uri: '/Users/Jason/Downloads/Pure.mov',
+          }}
+          style={styles.video}
+          resizeMode={'cover'}
+          repeat={true}
+          paused={paused}
+        />
+      </TouchableWithoutFeedback>
     </View>
   );
 };
